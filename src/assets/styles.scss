@@ -1,0 +1,99 @@
+.highcharts-container {
+    width: 100% !important;
+}
+.highcharts-root {
+    width: 100% !important;
+}
+
+body {
+    overflow: hidden;
+    --primary_bg : #141416;
+    --secondary_bg : #202028;
+    --primary_text_clr : #fff;
+    --seconday_text_clr : #dedede;
+    
+    // Font-size 
+    --font9:13px;
+    --font10: 1rem;
+    --font11: 1.1rem;
+    --font12: 1.2rem; //Used
+    --font13: 1.3rem; //Used
+    --font14: 1.4rem;
+    --font15: 1.5rem; //used
+    --font16: 1.6rem;
+    --font17: 1.7rem;
+    --font18: 1.8rem;
+    --font19: 1.9rem; //used
+    --font20: 2rem; //Used
+    --font22: 2.2rem;
+    --font24: 2.4rem;
+    --font25: 2.5rem;
+    --font26: 2.6rem;
+    --font28: 2.8rem;
+    --font30: 3rem;
+    --font32: 3.2rem;
+    --font34: 3.4rem;
+
+}
+
+
+input[type=search]{
+    &::-webkit-search-cancel-button{
+        position:relative;
+        right:2%;  
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius:10px;
+        // background-image: url(../images/Illustration/search_delete.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+    }
+}
+
+
+// common styles
+@mixin flexStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin containerStyle{
+    background-color: var(--secondary_bg);
+    padding: 15px;
+    border-radius: 10px;
+    h3{
+        margin: 0;
+        font-size: var(--font12);
+    }
+    &.remove_bg{
+        background-color: none;
+    }
+}
+
+// 
+@media (max-width:1200px) {
+    body{
+        --font9:12px;
+        --font22:1.5rem;
+    }
+}
+@media (max-width:768px){
+    body{
+        --font18:1.3rem;
+        --font22:2rem;
+        --font12:1rem;
+        --font11:0.8rem
+    }
+}
+
+@media (max-width:568px){
+    body{
+        --font18: 1rem !important;
+        --font22: 1.5rem!important;
+        --font12: 0.8rem!important;
+        --font11: 0.8rem!important;
+    }
+}
+

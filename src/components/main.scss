@@ -1,0 +1,46 @@
+@use "../assets/styles.scss";
+.main_container{
+    background-color: var(--primary_bg);
+    color: var(--primary_text_clr);
+    height: 100vh;
+    width: 100%;
+    .nav_main_container{
+        background-color: var(--secondary_bg);
+        height: 80px;
+    }
+    .sec_container{
+        height: calc(100% - 80px);
+        overflow: auto;
+        
+    }
+    .sec_container{
+        display: grid;
+        grid-template-columns: 80px calc(100% - 80px);
+
+    }
+    .sideNav{
+        background-color: var(--secondary_bg);
+        position: relative;
+    }
+    .mainRight{
+        background-color: var(--primary_bg);
+        margin: 0 auto;
+        width: 98%;
+    }
+}
+
+
+@media (max-width:567px){
+    
+    .sec_container{
+        grid-template-columns: 1fr !important;
+        padding: 0 10px;
+    }
+    .mainRight{
+        width: 100%;
+    }
+    .nav_main_container{
+        height: auto !important;
+        padding: 5px 0;
+    }
+}

@@ -1,13 +1,44 @@
-body {
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: font-regular;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: font-thin;
+  src: url(./assets/Fonts/Poppins-Thin.ttf);
+}
+@font-face {
+  font-family: font-light;
+  src: url(./assets/Fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: font-extralight;
+  src: url(./assets/Fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+  font-family: font-regular;
+  src: url(./assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: font-medium;
+  src: url(./assets/Fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: font-bold;
+  src: url(./assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: font-semibold;
+  src: url(./assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: font-extrabold;
+  src: url(./assets/Fonts/Poppins-ExtraBold.ttf);
+}
+
+.h3Chart tspan{
+  fill: #fff  ;
 }

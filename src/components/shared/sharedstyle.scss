@@ -1,0 +1,134 @@
+@use "../../assets/styles.scss";
+
+.activity_main_container {
+    @include styles.flexStyle();
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    .activity_left {
+        @include styles.flexStyle();
+        gap: 10px;
+        div {
+            @include styles.flexStyle();
+            height: 40px;
+            width: 40px;
+            padding: 10px;
+            border-radius: 50%;
+            &.GoalOne {
+                background-color: #58b05c;
+            }
+            &.GoalTwo {
+                background-color: #f44335;
+            }
+            &.GoalThree {
+                background-color: #1a73e8;
+            }
+        }
+        h4{
+            font-size: var(--font11);
+            color: var(--primary_text_clr)
+        }
+    }
+    .activity_right{
+        @include styles.flexStyle();
+        height: 15px;
+        width: 15px;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #48494e;
+        img{
+            height: 10px;
+            width: 10px;
+        }
+    }
+    &:hover{
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+.table_main{
+    width: 100%;
+    overflow: auto;
+    table{
+        min-width: 100%;
+        border-collapse: collapse;
+
+        th,td{
+            text-align: center;
+            font-size: var(--font9);
+            padding: 10px 0;    
+        }
+        th:nth-child(1),th:last-child,td:nth-child(1),td:last-child{
+            text-align: left;
+        }
+        tbody{
+            tr td{
+                border-top: 1px solid #acacbb;
+                .status{
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    background-color: red;
+                    color: #0e7e60;
+                    background-color: #164f44;
+                    font-family: font-semibold;
+                    width: max-content;
+                    &:not(.Delivered){
+                        background-color: red;
+                        background-color: #452b31  ;
+                        color: #dc595b;
+                    }
+                    &:hover{
+                        background-color: rgba(0,0,0,0.5)
+                    }
+                }
+                .follower{
+                    @include styles.flexStyle();
+                    justify-content: initial;
+                }
+            
+            }
+        }
+    }
+}
+
+.rating_main{
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #acacbb;
+ .rating_head{
+    @include styles.flexStyle();
+    justify-content: flex-start ;
+    gap: 10px;
+    padding-bottom: 10px;
+ }   
+ .rating_container{
+    @include styles.flexStyle();
+    justify-content: flex-start ;
+    gap: 4px;
+ }
+ h4{
+    font-size: var(--font11);
+    color: var(--primary_text_clr)
+ }
+ p{
+    font-size: var(--font9);
+    color: var(--seconday_text_clr);
+ }
+}
+
+@media (max-width:991px){
+    .activity_main_container .activity_left div{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width:768px){
+    .rating_head{
+        img{
+            height: 27px;
+            width: 27px;
+        }
+    }
+}
